@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events </title>
+</head>
+<body  style="background-color:#414141; color: aliceblue;">
+    <h2>Amazing Images </h2>
+    <div>
+        <ul>
+            <li ><img width="100px" id="flower" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQCtFtYKwKBNUtXFFCoB3b7gCOmCt0kCfvhMV8xIhHJQ&s=10" alt=""></li>
+            <li ><img width="100px" id="Road" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu7mT8y8qraj0TGiqf7pmUWrElb1gO-OImhCfQZxQUdg&s=10" alt=""></li>
+            <li ><img width="100px" id="leaves" src="https://wallpapershome.com/images/pages/ico_v/8163.jpg" alt=""></li>  
+            <li ><img width="200px" id="Prabhu" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThxpBxV46sj-kYKX4RymHjkfdgDNvz6XQPSpAWyCEDCg&s=10" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://www.google.com/" id="google">GOOGLE</a></li>
+        </ul>
+    </div>
+    
+</body>
+<script>
+//  document.getElementById('flower'). onclick = function () {
+//     alert('Flower is here')
+
+// document.getElementById('Road').addEventListener('click', function(){})
+//     alert("Road is here")
+// //  }
+
+// document.getElementById('flower').addEventListener('click', function(e){
+//     console.log("clicked inside the ul");
+// },false)
+
+// document.getElementById('leaves').addEventListener('click', function(e){
+//     console.log("leaves clicked");
+// },false)
+// document.getElementById('google').addEventListener('click',function(e){
+//    console.log("google clicked");
+   
+//     e.preventDefault()
+// },false)
+
+
+document.querySelector('ul').addEventListener('click',function(e){
+console.log(e.target.parentNode);
+const removeIt = e.target.parentNode
+// removeIt.remove()
+removeIt.parentNode.removeChild(removeIt)
+})
+</script>
+</html>
